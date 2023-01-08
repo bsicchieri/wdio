@@ -17,19 +17,14 @@ class ProgressBarPage extends Page {
         return $('#stopButton');
     }
 
-    get progressBar () {
-        return $('#progressBar');
+    get progress () {
+        return $('.progress');
     }
 
     /**
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password
      */
-    async chargeProgressBar () {
-        await this.btnStart.click();
-        // verificar 75%
-        await this.btnStop.click();
-    }
 
     /**
      * overwrite specific options to adapt it to page object

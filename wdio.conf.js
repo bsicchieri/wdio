@@ -1,3 +1,13 @@
+/*
+const url = require('./urls')
+const ENV = process.env.ENV
+
+if(!ENV || !['dev', 'hom', 'preProd'].includes(ENV)){
+    console.log('Please use the following format when running the test script: ENV=dev|hom|preProd')
+    process.exit()
+}
+*/
+
 exports.config = {
     //
     // ====================
@@ -25,6 +35,11 @@ exports.config = {
     specs: [
         './test/specs/**/*.js'
     ],
+    suites: {
+        actions: [
+            './test/specs/actions/*.js'
+        ]
+    },
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -60,7 +75,7 @@ exports.config = {
         //
         browserName: 'chrome',
         // browserName: 'firefox',
-        // browserName: 'firefox',
+        // browserName: 'MicrosoftEdge',
         acceptInsecureCerts: true
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
@@ -98,6 +113,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
+    // baseUrl: url[process.env.ENV],
     baseUrl: 'http://uitestingplayground.com',
     //
     // Default timeout for all waitFor* commands.
@@ -217,6 +233,15 @@ exports.config = {
     /**
      * Function to be executed before a test (in Mocha/Jasmine) starts.
      */
+    
+    before: () => {
+        require('expect-webdriverio');
+        global.wdioExpect = global.expect;
+        const chai = require('chai');
+        global.expect = chai.expect;
+    },
+    
+    /*
     beforeTest: function () {
         require('expect-webdriverio')
         global.wdioExpect = global.expect
@@ -228,8 +253,9 @@ exports.config = {
 
         global.assert = chai.assert
         global.expect = chai.expect
-        chai.should()
+        chai.Should()
     },
+    */
     /**
      * Hook that gets executed _before_ a hook within the suite starts (e.g. runs before calling
      * beforeEach in Mocha)

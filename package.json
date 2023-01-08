@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "wdio",
-    "wdio": "wdio run ./wdio.conf.js"
+    "wdio": "wdio run ./wdio.conf.js",
+    "actions": "wdio --suite actions"
   },
   "author": "Bruno Sicchieri",
   "license": "ISC",

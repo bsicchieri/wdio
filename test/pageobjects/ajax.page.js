@@ -9,7 +9,7 @@ class AjaxPage extends Page {
     /**
      * define selectors using getter methods
      */
-    get btnAjax () {
+    get btnTriggeringAjax () {
         return $('#ajaxButton');
     }
 
@@ -31,12 +31,10 @@ class AjaxPage extends Page {
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password
      */
-    async checkAjaxData () {
-        await this.btnAjax.click();
-        await this.btnAjax.click();
-        await this.btnAjax.click();
-        // esperar 15 segudos
-        // checar 3 mensagens
+    async clickBtnTriggeringAjaxRequest () {
+        await this.btnTriggeringAjax.click();
+        await this.btnTriggeringAjax.click();
+        await this.btnTriggeringAjax.click();
     }
 
     /**

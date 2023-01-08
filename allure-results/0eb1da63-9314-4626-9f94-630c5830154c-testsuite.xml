@@ -1,0 +1,79 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1673132028315' stop='1673132031942'>
+    <name>Wdio IU code challenge</name>
+    <title>Wdio IU code challenge</title>
+    <test-cases>
+        <test-case start='1673132028316' status='failed' stop='1673132031932'>
+            <name>should stop the progress bar at 75 percent</name>
+            <title>should stop the progress bar at 75 percent</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-2'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-108.0.5359.125'/>
+            </parameters>
+            <steps>
+                <step start='1673132028378' status='passed' stop='1673132031512'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='0128186e-1b24-4863-b28f-76fe98690be2-attachment.json' type='application/json' size='57'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1673132031514' status='passed' stop='1673132031578'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='79d4eef0-2152-4b18-be4f-546788e62fa5-attachment.json' type='application/json' size='56'/>
+                        <attachment title='Response' source='8da8d132-49b7-424d-8f42-86c67e33728c-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1673132031587' status='passed' stop='1673132031682'>
+                    <name>POST /session/:sessionId/element/f18b444e-0970-4c0c-8aa0-a0507dcd4620/click</name>
+                    <title>POST /session/:sessionId/element/f18b444e-0970-4c0c-8aa0-a0507dcd4620/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1673132031687' status='failed' stop='1673132031932'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1673132031687' status='passed' stop='1673132031907'>
+                            <name>POST /session/:sessionId/element</name>
+                            <title>POST /session/:sessionId/element</title>
+                            <attachments>
+                                <attachment title='Request' source='f60b9771-ebb6-4e11-978e-6a6e8e0f4fdf-attachment.json' type='application/json' size='56'/>
+                                <attachment title='Screenshot' source='424f1032-9d67-46a2-9201-d711d2b1281b-attachment.png' type='image/png' size='43197'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1673132031936' status='undefined'>
+                    <name>GET /session/:sessionId/element/1d5af24a-dd05-435a-ab1e-20dddcc0e020/text</name>
+                    <title>GET /session/:sessionId/element/1d5af24a-dd05-435a-ab1e-20dddcc0e020/text</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Response' source='7315be81-0520-4f5b-84f9-8922e40d24d6-attachment.json' type='application/json' size='83'/>
+            </attachments>
+            <failure>
+                <message>expected '75%' to equal Promise{…}      
+                      actual expected
+                      
+                      '75%'Promise [Promise] {}
+                      </message>
+                <stack-trace>AssertionError: expected '75%' to equal Promise{…}
+                    at Context.&lt;anonymous> (C:\Users\Bruno\Documents\GitHub\wdio\test\specs\progressBar.e2e.js:23:22)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
