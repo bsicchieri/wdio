@@ -1,0 +1,90 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1673214549281' stop='1673214551919'>
+    <name>Wdio IU code challenge</name>
+    <title>Wdio IU code challenge</title>
+    <test-cases>
+        <test-case start='1673214549281' status='broken' stop='1673214551917'>
+            <name>should check message when click button more than once</name>
+            <title>should check message when click button more than once</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-108.0.5359.125'/>
+            </parameters>
+            <steps>
+                <step start='1673214549284' status='passed' stop='1673214550984'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='d97795da-33b7-4fc1-bc76-1bba80d98c96-attachment.json' type='application/json' size='50'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1673214550986' status='passed' stop='1673214551050'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='ae480478-88f3-42df-bb68-eab8109ddb92-attachment.json' type='application/json' size='55'/>
+                        <attachment title='Response' source='b7982b0b-44a9-4ce0-a894-976620fcfadc-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1673214551063' status='passed' stop='1673214551268'>
+                    <name>POST /session/:sessionId/element/132f5e3d-b7cd-4291-be10-54ff0a3efbed/click</name>
+                    <title>POST /session/:sessionId/element/132f5e3d-b7cd-4291-be10-54ff0a3efbed/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1673214551269' status='passed' stop='1673214551354'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='c70db31a-51e6-4565-a13f-7c9d08d12ada-attachment.json' type='application/json' size='55'/>
+                        <attachment title='Response' source='d4862136-2a95-47fd-8735-e93679303806-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1673214551364' status='passed' stop='1673214551543'>
+                    <name>POST /session/:sessionId/element/132f5e3d-b7cd-4291-be10-54ff0a3efbed/click</name>
+                    <title>POST /session/:sessionId/element/132f5e3d-b7cd-4291-be10-54ff0a3efbed/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1673214551544' status='passed' stop='1673214551605'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='1adf2c58-e976-406b-b6d3-3ac19f7d531e-attachment.json' type='application/json' size='55'/>
+                        <attachment title='Response' source='28b8725f-448e-44ff-83c3-76ac76136b2d-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1673214551609' status='passed' stop='1673214551696'>
+                    <name>POST /session/:sessionId/element/132f5e3d-b7cd-4291-be10-54ff0a3efbed/click</name>
+                    <title>POST /session/:sessionId/element/132f5e3d-b7cd-4291-be10-54ff0a3efbed/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1673214551697' status='passed' stop='1673214551915'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='b9c24087-65a0-4ad8-bfc6-4afa070491f2-attachment.png' type='image/png' size='82538'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>this.getDataAjaxText is not a function</message>
+                <stack-trace>TypeError: this.getDataAjaxText is not a function
+                    at AjaxPage.getDataAjaxMessageText (C:\Users\Bruno\Documents\GitHub\wdio\test\pageobjects\ajax.page.js:29:27)
+                    at Context.&lt;anonymous> (C:\Users\Bruno\Documents\GitHub\wdio\test\specs\ajax.e2e.js:18:81)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

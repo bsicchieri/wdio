@@ -1,0 +1,4 @@
+{
+  "using": "css selector",
+  "value": "#content .bg-success:nth-child(2)"
+}

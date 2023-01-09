@@ -10,27 +10,24 @@ class ShadowDomPage extends Page {
      * define selectors using getter methods
      */
     get inputGuidGenerator () {
-        return $('#editField');
+        return $('<guid-generator>').shadow$('#editField');
     }
 
     get btnGenerate () {
-        return $('#buttonGenerate');
+        return $('<guid-generator>').shadow$('#buttonGenerate');
     }
 
     get btnCopy () {
-        return $('#buttonCopy');
+        return $('<guid-generator>').shadow$('#buttonCopy');
     }
 
     /**
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password
      */
-    async checkShadowDom () {
+    async generateAndCopyGuid () {
         await this.btnGenerate.click();
         await this.btnCopy.click();
-        // pegar o valor do input guid
-        // comparar os valores
-        // mensagem de erro
     }
 
     /**

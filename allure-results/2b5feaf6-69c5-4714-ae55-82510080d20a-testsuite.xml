@@ -1,0 +1,92 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1673222190926' stop='1673222192702'>
+    <name>Wdio IU code challenge</name>
+    <title>Wdio IU code challenge</title>
+    <test-cases>
+        <test-case start='1673222190926' status='broken' stop='1673222192701'>
+            <name>should verify that the copy button does not work</name>
+            <title>should verify that the copy button does not work</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-108.0.5359.125'/>
+            </parameters>
+            <steps>
+                <step start='1673222190930' status='passed' stop='1673222191984'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='a666becc-4baf-4586-9460-b51d6674fe38-attachment.json' type='application/json' size='55'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1673222191986' status='passed' stop='1673222192086'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='bac6f8f5-9c78-467d-a697-e8721314f4af-attachment.json' type='application/json' size='54'/>
+                        <attachment title='Response' source='0ee82ad0-d4b8-4745-866e-c3d2afc35832-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1673222192101' status='passed' stop='1673222192152'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='04941aa2-359a-40af-8089-ac43a55eaa44-attachment.json' type='application/json' size='572'/>
+                        <attachment title='Response' source='97bb4c4f-1213-4c52-b837-bb1ee2828187-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1673222192160' status='passed' stop='1673222192264'>
+                    <name>POST /session/:sessionId/element/6e00cc6e-d693-49e6-a5f0-1fb26208a154/click</name>
+                    <title>POST /session/:sessionId/element/6e00cc6e-d693-49e6-a5f0-1fb26208a154/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1673222192265' status='passed' stop='1673222192319'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='77aad2d8-aa39-4cd5-ab55-fa32360b892e-attachment.json' type='application/json' size='54'/>
+                        <attachment title='Response' source='83460011-a0db-4e1f-ac38-25b0d1d06e23-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1673222192326' status='passed' stop='1673222192381'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='383e502c-9f1d-4c1f-9689-b16bd8e065aa-attachment.json' type='application/json' size='564'/>
+                        <attachment title='Response' source='083f2c8e-3265-4836-aee8-dc03ddad14ec-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1673222192384' status='passed' stop='1673222192500'>
+                    <name>POST /session/:sessionId/element/3f597933-268b-4328-9eaf-fabd5f85e6d3/click</name>
+                    <title>POST /session/:sessionId/element/3f597933-268b-4328-9eaf-fabd5f85e6d3/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1673222192501' status='passed' stop='1673222192700'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='0d9b9f5f-c30e-495e-812c-06d2727300e2-attachment.png' type='image/png' size='95456'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Cannot read properties of undefined (reading 'readText')</message>
+                <stack-trace>TypeError: Cannot read properties of undefined (reading 'readText')
+                    at Context.&lt;anonymous> (C:\Users\Bruno\Documents\GitHub\wdio\test\specs\shadowdom.e2e.js:15:77)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

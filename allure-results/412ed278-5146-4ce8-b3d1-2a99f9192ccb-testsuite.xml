@@ -1,0 +1,98 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1673211749872' stop='1673211752882'>
+    <name>Wdio IU code challenge</name>
+    <title>Wdio IU code challenge</title>
+    <test-cases>
+        <test-case start='1673211749872' status='broken' stop='1673211752880'>
+            <name>should check message when click button more than once</name>
+            <title>should check message when click button more than once</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-108.0.5359.125'/>
+            </parameters>
+            <steps>
+                <step start='1673211749882' status='passed' stop='1673211751519'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='aef6d56c-bb9e-46fa-9e26-b1c91203cd55-attachment.json' type='application/json' size='50'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1673211751521' status='passed' stop='1673211751618'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='e380a43f-4418-4cc3-b845-a72cbdd1186c-attachment.json' type='application/json' size='55'/>
+                        <attachment title='Response' source='6946d501-eaca-473d-811d-1dfa90b94c9d-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1673211751632' status='passed' stop='1673211751933'>
+                    <name>POST /session/:sessionId/element/ab31ac86-8d60-4e27-a9a8-ef5b5bc4e171/click</name>
+                    <title>POST /session/:sessionId/element/ab31ac86-8d60-4e27-a9a8-ef5b5bc4e171/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1673211751934' status='passed' stop='1673211752144'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='4725e805-045a-41e8-bc2b-b6dfef223bd3-attachment.json' type='application/json' size='55'/>
+                        <attachment title='Response' source='678a6677-1cf0-410f-97f4-60b27f17d51f-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1673211752147' status='passed' stop='1673211752255'>
+                    <name>POST /session/:sessionId/element/ab31ac86-8d60-4e27-a9a8-ef5b5bc4e171/click</name>
+                    <title>POST /session/:sessionId/element/ab31ac86-8d60-4e27-a9a8-ef5b5bc4e171/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1673211752256' status='passed' stop='1673211752315'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='bb705fd7-c1a9-4331-91d6-1fed9d752cad-attachment.json' type='application/json' size='55'/>
+                        <attachment title='Response' source='0bd7f0cd-90dd-405e-95ca-9d7754047693-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1673211752318' status='passed' stop='1673211752445'>
+                    <name>POST /session/:sessionId/element/ab31ac86-8d60-4e27-a9a8-ef5b5bc4e171/click</name>
+                    <title>POST /session/:sessionId/element/ab31ac86-8d60-4e27-a9a8-ef5b5bc4e171/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1673211752449' status='broken' stop='1673211752880'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1673211752449' status='passed' stop='1673211752876'>
+                            <name>POST /session/:sessionId/element</name>
+                            <title>POST /session/:sessionId/element</title>
+                            <attachments>
+                                <attachment title='Request' source='80244c21-2def-41e1-8094-b0efab013f59-attachment.json' type='application/json' size='52'/>
+                                <attachment title='Screenshot' source='418bf680-25ad-4cfb-a54f-a83412913f0f-attachment.png' type='image/png' size='82543'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>this.specificChildElement(...).getText is not a function</message>
+                <stack-trace>TypeError: this.specificChildElement(...).getText is not a function
+                    at AjaxPage.getSpecificElementText (C:\Users\Bruno\Documents\GitHub\wdio\test\pageobjects\ajax.page.js:36:56)
+                    at Context.&lt;anonymous> (C:\Users\Bruno\Documents\GitHub\wdio\test\specs\ajax.e2e.js:21:81)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

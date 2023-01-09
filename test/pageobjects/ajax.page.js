@@ -13,25 +13,20 @@ class AjaxPage extends Page {
         return $('#ajaxButton');
     }
 
-    get allLabelText () {
-        return $('#content');
+    async getDataAjaxMessage(index) {
+        return (await $(`#content .bg-success:nth-child(${index})`))
     }
 
-    get labelText () {
-        return this.allLabelText.$$('.bg-success')
-    }
-
-    async getLabelText(){
-        this.labelText.filter((element) => {
-            console.log(element.getText())
-        })
+    async getDataAjaxMessageText(index) {
+        await (await this.getDataAjaxMessage(index)).waitForDisplayed({ timeout: 45000 })
+        return (await this.getDataAjaxMessage(index)).getText()
     }
 
     /**
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password
      */
-    async clickBtnTriggeringAjaxRequest () {
+    async clickAjaxRequestThreeTimes () {
         await this.btnTriggeringAjax.click();
         await this.btnTriggeringAjax.click();
         await this.btnTriggeringAjax.click();

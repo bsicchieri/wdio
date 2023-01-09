@@ -1,0 +1,96 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1673134854712' stop='1673134856453'>
+    <name>Wdio IU code challenge</name>
+    <title>Wdio IU code challenge</title>
+    <test-cases>
+        <test-case start='1673134854714' status='failed' stop='1673134856452'>
+            <name>should stop the progress bar at 75 percent</name>
+            <title>should stop the progress bar at 75 percent</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-108.0.5359.125'/>
+            </parameters>
+            <steps>
+                <step start='1673134854743' status='passed' stop='1673134855918'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='5fb68e56-2a9a-4dd4-a224-e0c6bd6fe2cc-attachment.json' type='application/json' size='57'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1673134855921' status='passed' stop='1673134855987'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='8a841ff7-d78d-492d-a2ac-d5118acae2f1-attachment.json' type='application/json' size='56'/>
+                        <attachment title='Response' source='1e14b677-689a-458a-81aa-b2296f209a3e-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1673134855999' status='passed' stop='1673134856106'>
+                    <name>POST /session/:sessionId/element/5583e041-d900-42f4-83d2-629237e3a966/click</name>
+                    <title>POST /session/:sessionId/element/5583e041-d900-42f4-83d2-629237e3a966/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1673134856114' status='failed' stop='1673134856452'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='26b56509-e720-4187-bff0-c19e2b3aa3fa-attachment.json' type='application/json' size='53'/>
+                    </attachments>
+                    <steps>
+                        <step start='1673134856116' status='passed' stop='1673134856446'>
+                            <name>GET /session/:sessionId/screenshot</name>
+                            <title>GET /session/:sessionId/screenshot</title>
+                            <attachments>
+                                <attachment title='Screenshot' source='1bbb1a13-b314-466b-bc1a-5445d9558e32-attachment.png' type='image/png' size='43197'/>
+                            </attachments>
+                            <steps>
+                                <step start='1673134856117' status='passed' stop='1673134856239'>
+                                    <name>POST /session/:sessionId/element</name>
+                                    <title>POST /session/:sessionId/element</title>
+                                    <attachments>
+                                        <attachment title='Request' source='64122de8-bf31-4e28-8145-933805939e06-attachment.json' type='application/json' size='56'/>
+                                        <attachment title='Response' source='e4bdfd6a-06d7-4925-9f1d-b3de96d0cdb2-attachment.json' type='application/json' size='83'/>
+                                    </attachments>
+                                    <steps/>
+                                </step>
+                                <step start='1673134856248' status='passed' stop='1673134856289'>
+                                    <name>GET /session/:sessionId/element/34dfbdfe-4005-4860-b885-9a6dee93b652/property/value</name>
+                                    <title>GET /session/:sessionId/element/34dfbdfe-4005-4860-b885-9a6dee93b652/property/value</title>
+                                    <attachments>
+                                        <attachment title='Response' source='d8d5cdf1-cd9c-4cbd-9126-7fbad9319907-attachment.json' type='application/json' size='83'/>
+                                    </attachments>
+                                    <steps/>
+                                </step>
+                                <step start='1673134856292' status='passed' stop='1673134856435'>
+                                    <name>GET /session/:sessionId/element/5583e041-d900-42f4-83d2-629237e3a966/text</name>
+                                    <title>GET /session/:sessionId/element/5583e041-d900-42f4-83d2-629237e3a966/text</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>expected '75%' to equal Promise{…}      
+                      actual expected
+                      
+                      '75%'Promise [Promise] {}
+                      </message>
+                <stack-trace>AssertionError: expected '75%' to equal Promise{…}
+                    at Context.&lt;anonymous> (C:\Users\Bruno\Documents\GitHub\wdio\test\specs\progressBar.e2e.js:23:22)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

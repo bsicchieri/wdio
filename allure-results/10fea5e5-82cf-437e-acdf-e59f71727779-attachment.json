@@ -1,0 +1,10 @@
+{
+  "script": "return (function (elem, id) {\n        return (function() {\n      // element has a shadowRoot property\n      if (this.shadowRoot) {\n        return this.shadowRoot.querySelector('#buttonGenerate')\n      }\n      // fall back to querying the element directly if not\n      return this.querySelector('#buttonGenerate')\n    }).call(elem, id);\n    }).apply(null, arguments)",
+  "args": [
+    {
+      "element-6066-11e4-a52e-4f735466cecf": "7094f3a0-6570-4197-849a-8ba8f98e2653",
+      "ELEMENT": "7094f3a0-6570-4197-849a-8ba8f98e2653"
+    },
+    null
+  ]
+}

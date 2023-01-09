@@ -1,0 +1,92 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1673222227582' stop='1673222229378'>
+    <name>Wdio IU code challenge</name>
+    <title>Wdio IU code challenge</title>
+    <test-cases>
+        <test-case start='1673222227583' status='broken' stop='1673222229376'>
+            <name>should verify that the copy button does not work</name>
+            <title>should verify that the copy button does not work</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-108.0.5359.125'/>
+            </parameters>
+            <steps>
+                <step start='1673222227599' status='passed' stop='1673222228627'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='e5513c04-5dd6-41d8-b6e6-54da26b083d7-attachment.json' type='application/json' size='55'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1673222228630' status='passed' stop='1673222228713'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='19b72990-6989-4940-bf71-e57607bb0c80-attachment.json' type='application/json' size='54'/>
+                        <attachment title='Response' source='8ca59ff3-070d-495b-854c-f7e5db4a6303-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1673222228730' status='passed' stop='1673222228799'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='d923e187-a4d7-44c6-91eb-518f78c90b46-attachment.json' type='application/json' size='572'/>
+                        <attachment title='Response' source='66b17b6d-5d5b-4574-9e42-369cacebddf2-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1673222228805' status='passed' stop='1673222228932'>
+                    <name>POST /session/:sessionId/element/ac854293-2826-437d-a73c-eed7e31b44c9/click</name>
+                    <title>POST /session/:sessionId/element/ac854293-2826-437d-a73c-eed7e31b44c9/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1673222228934' status='passed' stop='1673222229004'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='970e3e2e-4933-455a-957e-c79702217609-attachment.json' type='application/json' size='54'/>
+                        <attachment title='Response' source='50838c44-c8e6-485e-a344-750401eba40b-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1673222229007' status='passed' stop='1673222229074'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='539fd9a5-6d30-42b6-9d13-bed6c27e55c3-attachment.json' type='application/json' size='564'/>
+                        <attachment title='Response' source='6ba61b5a-ddbf-4f4a-b102-4c482b686581-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1673222229080' status='passed' stop='1673222229174'>
+                    <name>POST /session/:sessionId/element/799d3b89-d821-4ca2-a0c2-69b840cd9b9f/click</name>
+                    <title>POST /session/:sessionId/element/799d3b89-d821-4ca2-a0c2-69b840cd9b9f/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1673222229175' status='passed' stop='1673222229374'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='4ede2b0f-68b5-4d94-9411-7740ff2d5592-attachment.png' type='image/png' size='95602'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>browser.readText is not a function</message>
+                <stack-trace>TypeError: browser.readText is not a function
+                    at Context.&lt;anonymous> (C:\Users\Bruno\Documents\GitHub\wdio\test\specs\shadowdom.e2e.js:15:67)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

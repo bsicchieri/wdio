@@ -1,0 +1,68 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1673135046966' stop='1673135048428'>
+    <name>Wdio IU code challenge</name>
+    <title>Wdio IU code challenge</title>
+    <test-cases>
+        <test-case start='1673135046967' status='broken' stop='1673135048427'>
+            <name>should stop the progress bar at 75 percent</name>
+            <title>should stop the progress bar at 75 percent</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-108.0.5359.125'/>
+            </parameters>
+            <steps>
+                <step start='1673135046970' status='passed' stop='1673135047963'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='504fb56e-d5d6-4422-906c-f02d3946d1c8-attachment.json' type='application/json' size='57'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1673135047965' status='passed' stop='1673135048035'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='e85a322a-3177-41bd-bf9f-a86d6991d523-attachment.json' type='application/json' size='56'/>
+                        <attachment title='Response' source='dfcda1a5-545e-4282-b185-0c052759de47-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1673135048049' status='passed' stop='1673135048142'>
+                    <name>POST /session/:sessionId/element/90976f1d-9ec6-447a-9387-bdf36ad49023/click</name>
+                    <title>POST /session/:sessionId/element/90976f1d-9ec6-447a-9387-bdf36ad49023/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1673135048149' status='broken' stop='1673135048426'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1673135048151' status='passed' stop='1673135048424'>
+                            <name>POST /session/:sessionId/element</name>
+                            <title>POST /session/:sessionId/element</title>
+                            <attachments>
+                                <attachment title='Request' source='f446b172-a10d-4452-ac4a-1eb0f9a8f943-attachment.json' type='application/json' size='53'/>
+                                <attachment title='Screenshot' source='95eff235-42ba-43d1-a1a4-2aa8415298ee-attachment.png' type='image/png' size='43197'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Invalid Chai property: toHaveText</message>
+                <stack-trace>Error: Invalid Chai property: toHaveText
+                    at Object.proxyGetter [as get] (C:\Users\Bruno\Documents\GitHub\wdio\node_modules\chai\lib\chai\utils\proxify.js:78:17)
+                    at Context.&lt;anonymous> (C:\Users\Bruno\Documents\GitHub\wdio\test\specs\progressBar.e2e.js:22:50)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

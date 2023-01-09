@@ -1,0 +1,64 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1673143828643' stop='1673143829948'>
+    <name>Wdio IU code challenge</name>
+    <title>Wdio IU code challenge</title>
+    <test-cases>
+        <test-case start='1673143828643' status='failed' stop='1673143829925'>
+            <name>should stop the progress bar at 75 percent</name>
+            <title>should stop the progress bar at 75 percent</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-108.0.5359.125'/>
+            </parameters>
+            <steps>
+                <step start='1673143828646' status='passed' stop='1673143829684'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='f6a7f363-05b1-4172-8934-3c8685b2babf-attachment.json' type='application/json' size='57'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1673143829690' status='failed' stop='1673143829925'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1673143829691' status='passed' stop='1673143829914'>
+                            <name>POST /session/:sessionId/element</name>
+                            <title>POST /session/:sessionId/element</title>
+                            <attachments>
+                                <attachment title='Request' source='0af26a9b-7c58-4ab6-88ea-99018ef06a86-attachment.json' type='application/json' size='56'/>
+                                <attachment title='Screenshot' source='dd9ac044-11a5-47ce-a992-d70304d06ea3-attachment.png' type='image/png' size='42356'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1673143829945' status='undefined'>
+                    <name>GET /session/:sessionId/element/1377a10e-056e-49a2-82fe-a34b9a56b2f9/text</name>
+                    <title>GET /session/:sessionId/element/1377a10e-056e-49a2-82fe-a34b9a56b2f9/text</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Response' source='7beeab87-7887-45c4-a2ff-c3eba1974e58-attachment.json' type='application/json' size='83'/>
+            </attachments>
+            <failure>
+                <message>expected 'Start' to equal Promise{…}      
+                      actual expected
+                      
+                      'Start'Promise [Promise] {}
+                      </message>
+                <stack-trace>AssertionError: expected 'Start' to equal Promise{…}
+                    at Context.&lt;anonymous> (C:\Users\Bruno\Documents\GitHub\wdio\test\specs\progressBar.e2e.js:20:22)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
