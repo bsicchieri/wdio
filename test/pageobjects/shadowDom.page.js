@@ -1,5 +1,3 @@
-
-
 const Page = require('./page');
 
 /**
@@ -10,16 +8,18 @@ class ShadowDomPage extends Page {
      * define selectors using getter methods
      */
     get inputGuidGenerator () {
-        return $('<guid-generator>').shadow$('#editField');
+        return $('guid-generator').shadow$('#editField');
     }
 
     get btnGenerate () {
-        return $('<guid-generator>').shadow$('#buttonGenerate');
+        return $('guid-generator').shadow$('#buttonGenerate');
     }
 
     get btnCopy () {
-        return $('<guid-generator>').shadow$('#buttonCopy');
+        return $('guid-generator').shadow$('#buttonCopy');
     }
+
+    // clickOnCopyBtn
 
     /**
      * a method to encapsule automation code to interact with the page
@@ -33,8 +33,8 @@ class ShadowDomPage extends Page {
     /**
      * overwrite specific options to adapt it to page object
      */
-    open () {
-        return super.open('shadowdom');
+    open (path) {
+        return super.open(`${path}`);
     }
 }
 

@@ -1,5 +1,3 @@
-
-
 const Page = require('./page');
 
 /**
@@ -26,11 +24,19 @@ class ProgressBarPage extends Page {
      * e.g. to login using username and password
      */
 
+    async waitForPercentage(percentage) {
+        await ProgressBarPage.progress.waitUntil(async function () {
+            return (await this.getText()) === percentage
+        }, {
+            timeout: 50000
+        })
+    }
+
     /**
      * overwrite specific options to adapt it to page object
      */
-    open () {
-        return super.open('progressbar');
+    open (path) {
+        return super.open(`${path}`);
     }
 }
 

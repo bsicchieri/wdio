@@ -1,4 +1,0 @@
-{
-  "script": "return ((cb) => navigator.clipboard.readText().then(cb, cb)).apply(null, arguments)",
-  "args": []
-}

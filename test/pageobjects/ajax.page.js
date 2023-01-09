@@ -1,5 +1,3 @@
-
-
 const Page = require('./page');
 
 /**
@@ -35,8 +33,8 @@ class AjaxPage extends Page {
     /**
      * overwrite specific options to adapt it to page object
      */
-    open () {
-        return super.open('ajax');
+    open (path) {
+        return super.open(`${path}`);
     }
 }
 

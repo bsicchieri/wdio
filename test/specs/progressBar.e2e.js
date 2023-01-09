@@ -1,4 +1,6 @@
 const ProgressBarPage = require('../pageobjects/progressBar.page')
+const ProgressBarData = require('../../data/progressBar.data')
+const { assert } = require('chai')
 
 describe('Wdio IU code challenge', () => {
     /* Crie um teste para o cenário abaixo Navegue até a url - 
@@ -9,13 +11,10 @@ describe('Wdio IU code challenge', () => {
     5% é o limite de tolerância aceitável para passar no teste. */
 
     it('should stop the progress bar at 75 percent', async () => {
-        await ProgressBarPage.open()
+        await ProgressBarPage.open(await ProgressBarData.path)
+        await assert.equal(await ProgressBarData.url, await browser.getUrl())
         await ProgressBarPage.btnStart.click()
-        await ProgressBarPage.progress.waitUntil(async function () {
-            return (await this.getText()) === '75%'
-        }, {
-            timeout: 50000
-        })
+        await ProgressBarPage.waitForPercentage(await ProgressBarData.percent)
         await ProgressBarPage.btnStop.click()
     })
 })

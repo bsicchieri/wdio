@@ -1,6 +1,6 @@
 const ShadowDomPage = require('../pageobjects/shadowDom.page')
+const ShadowDomData = require('../../data/shadowDom.data')
 const { assert } = require('chai')
-const { Key } = require('webdriverio')
 
 describe('Wdio IU code challenge', () => {
     /* Crie um teste para o cenário de bug abaixo - 
@@ -9,9 +9,8 @@ describe('Wdio IU code challenge', () => {
     http://uitestingplayground.com/shadowdom */
 
     it('should verify that the copy button does not work', async () => {
-        await ShadowDomPage.open()
-
-        //expect(browser).toHaveUrl('http://uitestingplayground.com/shadowdom')
+        await ShadowDomPage.open(await ShadowDomData.path)
+        await assert.equal(ShadowDomData.url, await browser.getUrl())
         await ShadowDomPage.generateAndCopyGuid()
         let clipboardText = await ShadowDomPage.inputGuidGenerator.getValue()
         await ShadowDomPage.inputGuidGenerator.clearValue()

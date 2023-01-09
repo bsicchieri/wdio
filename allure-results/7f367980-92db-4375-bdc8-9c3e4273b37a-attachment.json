@@ -1,5 +1,0 @@
-{
-  "error": "no such element",
-  "message": "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#content .bg-success:nth-child(3)\"}\n  (Session info: chrome=108.0.5359.125)",
-  "stacktrace": "Backtrace:\n\t(No symbol) [0x0092F243]\n\t(No symbol) [0x008B7FD1]\n\t(No symbol) [0x007AD04D]\n\t(No symbol) [0x007DC0B0]\n\t(No symbol) [0x007DC22B]\n\t(No symbol) [0x0080E612]\n\t(No symbol) [0x007F85D4]\n\t(No symbol) [0x0080C9EB]\n\t(No symbol) [0x007F8386]\n\t(No symbol) [0x007D163C]\n\t(No symbol) [0x007D269D]\n\tGetHandleVerifier [0x00BC9A22+2655074]\n\tGetHandleVerifier [0x00BBCA24+2601828]\n\tGetHandleVerifier [0x009D8C0A+619850]\n\tGetHandleVerifier [0x009D7830+614768]\n\t(No symbol) [0x008C05FC]\n\t(No symbol) [0x008C5968]\n\t(No symbol) [0x008C5A55]\n\t(No symbol) [0x008D051B]\n\tBaseThreadInitThunk [0x75BB00F9+25]\n\tRtlGetAppContainerNamedObjectPath [0x773F7BBE+286]\n\tRtlGetAppContainerNamedObjectPath [0x773F7B8E+238]\n"
-}
