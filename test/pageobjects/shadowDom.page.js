@@ -1,9 +1,9 @@
-const Page = require('./page');
+const PlaygroundPage = require('./playground.page');
 
 /**
  * sub page containing specific selectors and methods for a specific page
  */
-class ShadowDomPage extends Page {
+class ShadowDomPage extends PlaygroundPage {
     /**
      * define selectors using getter methods
      */

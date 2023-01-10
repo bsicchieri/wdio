@@ -11,7 +11,7 @@ describe('Wdio IU code challenge', () => {
 
     it('should check message when click button more than once', async () => {
         await AjaxPage.open(await AjaxPageData.path)
-        await assert.equal(AjaxPageData.url, await browser.getUrl())
+        await assert.equal(await AjaxPageData.url, await browser.getUrl())
         await AjaxPage.clickAjaxRequestThreeTimes()
         await assert.equal('Data loaded with AJAX get request.', await AjaxPage.getDataAjaxMessageText(1), 'Message displayed for the first time')
         await assert.equal('Data loaded with AJAX get request.', await AjaxPage.getDataAjaxMessageText(2), 'Message displayed for the second time')
