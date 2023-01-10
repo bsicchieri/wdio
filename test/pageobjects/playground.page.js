@@ -1,9 +1,4 @@
-/**
-* main page object containing all methods, selectors and functionality
-* that is shared across all page objects
-*/
-module.exports = class Page {
-
+module.exports = class PlaygroundPage {
     /*
     constructor() {
         this.title = 'My Page'
