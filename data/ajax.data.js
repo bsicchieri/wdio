@@ -1,4 +1,4 @@
 module.exports = {
     url: 'http://uitestingplayground.com/ajax',
-    path: 'ajax'
+    ajaxMessage: 'Data loaded with AJAX get request.'
 }

@@ -1,4 +1,3 @@
 module.exports = {
-    url: 'http://uitestingplayground.com/shadowdom',
-    path: 'shadowdom'
+    url: 'http://uitestingplayground.com/shadowdom'
 }
