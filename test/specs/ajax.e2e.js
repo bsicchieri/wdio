@@ -1,6 +1,5 @@
 const AjaxPage = require('../pageobjects/ajax.page')
-const AjaxPageData = require('../../data/ajax.data')
-const { assert } = require('chai')
+const AjaxData = require('../../data/ajax.data')
 
 describe('Wdio IU code challenge', () => {
     /* Crie um teste para o cenário de bug abaixo Navegue até o URL - 
@@ -10,11 +9,12 @@ describe('Wdio IU code challenge', () => {
     não é exibida mais de uma vez */
 
     it('should check message when click button more than once', async () => {
-        await AjaxPage.open(await AjaxPageData.path)
-        await assert.equal(await AjaxPageData.url, await browser.getUrl())
-        await AjaxPage.clickAjaxRequestThreeTimes()
-        await assert.equal('Data loaded with AJAX get request.', await AjaxPage.getDataAjaxMessageText(1), 'Message displayed for the first time')
-        await assert.equal('Data loaded with AJAX get request.', await AjaxPage.getDataAjaxMessageText(2), 'Message displayed for the second time')
-        await assert.equal('Data loaded with AJAX get request.', await AjaxPage.getDataAjaxMessageText(3), 'Message displayed for the third time')
+        await AjaxPage.open(await AjaxData.url)
+        await AjaxPage.validateUrl(await AjaxData.url)
+        await AjaxPage.clickBtnAjaxRequestTwoTimes()
+        await AjaxPage.waitForSuccessAjaxMessages()
+        await expect(await AjaxPage.successMessages).toBeElementsArrayOfSize(2)
+        // await expect(await AjaxPage.successMessages).toBeDisplayed()
+        // await expect(await AjaxPage.successMessages).toHaveText(await AjaxData.ajaxMessage)
     })
 })

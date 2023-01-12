@@ -1,6 +1,6 @@
-const HerokuappPage = require('./herokuapp.page');
+const Page = require('./page');
 
-class LoginPage extends HerokuappPage {
+class LoginPage extends Page {
     get inputUsername () {
         return $('#username');
     }

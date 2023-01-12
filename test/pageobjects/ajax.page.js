@@ -1,40 +1,23 @@
-const PlaygroundPage = require('./playgroud.page');
+const Page = require('./page');
 
-/**
- * sub page containing specific selectors and methods for a specific page
- */
-class AjaxPage extends PlaygroundPage {
-    /**
-     * define selectors using getter methods
-     */
+class AjaxPage extends Page {
     get btnTriggeringAjax () {
-        return $('#ajaxButton');
+        return $('#ajaxButton')
     }
 
-    async getDataAjaxMessage(index) {
-        return (await $(`#content .bg-success:nth-child(${index})`))
+    get successMessages () {
+        return $$("#content p")
     }
 
-    async getDataAjaxMessageText(index) {
-        await (await this.getDataAjaxMessage(index)).waitForDisplayed({ timeout: 45000 })
-        return (await this.getDataAjaxMessage(index)).getText()
+    async clickBtnAjaxRequestTwoTimes () {
+        await this.btnTriggeringAjax.doubleClick()
     }
 
-    /**
-     * a method to encapsule automation code to interact with the page
-     * e.g. to login using username and password
-     */
-    async clickAjaxRequestThreeTimes () {
-        await this.btnTriggeringAjax.click();
-        await this.btnTriggeringAjax.click();
-        await this.btnTriggeringAjax.click();
-    }
-
-    /**
-     * overwrite specific options to adapt it to page object
-     */
-    open (path) {
-        return super.open(`${path}`);
+    async waitForSuccessAjaxMessages () {
+        await browser.waitUntil(
+            async () => (await this.successMessages.length) === 2, 
+            { timeout: 40000 }
+        )
     }
 }
 

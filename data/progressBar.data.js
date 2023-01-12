@@ -1,5 +1,6 @@
 module.exports = {
     url: 'http://uitestingplayground.com/progressbar',
-    path: 'progressbar',
-    percent: '75%'
+    percent: '75%',
+    minPercentNumber: '75',
+    maxPercentNumber: '80'
 }

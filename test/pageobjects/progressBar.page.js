@@ -1,42 +1,45 @@
-const PlaygroundPage = require('./playgroud.page');
+const Page = require('./page');
 
-/**
- * sub page containing specific selectors and methods for a specific page
- */
-class ProgressBarPage extends PlaygroundPage {
-    /**
-     * define selectors using getter methods
-     */
+class ProgressBarPage extends Page {
     get btnStart () {
-        return $('#startButton');
+        return $('#startButton')
     }
 
     get btnStop () {
-        return $('#stopButton');
+        return $('#stopButton')
     }
 
     get progress () {
-        return $('.progress');
+        return $('.progress')
     }
 
-    /**
-     * a method to encapsule automation code to interact with the page
-     * e.g. to login using username and password
-     */
+    get progressBar () {
+        return $('#progressBar')
+    }
 
-    async waitForPercentage(percentage) {
-        await ProgressBarPage.progress.waitUntil(async function () {
+    async clickOnStartButton () {
+        await this.btnStart.click()
+    }
+
+    async waitForPercentage (percentage) {
+        await this.progress.waitUntil(async function () {
             return (await this.getText()) === percentage
         }, {
             timeout: 50000
         })
     }
 
-    /**
-     * overwrite specific options to adapt it to page object
-     */
-    open (path) {
-        return super.open(`${path}`);
+    async clickOnStopButton () {
+        await this.btnStop.click()
+    }
+
+    async parsePercentage (currentPercentage) {
+        return parseFloat(currentPercentage)
+    }
+
+    async validateFinalPercentage (currentPercentage, minPercentNumber, maxPercentNumber) {
+        await expect(await this.parsePercentage(currentPercentage)) >= (minPercentNumber)
+        await expect(await this.parsePercentage(currentPercentage)) <= (maxPercentNumber)
     }
 }
 

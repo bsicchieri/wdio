@@ -9,13 +9,11 @@ describe('Wdio IU code challenge', () => {
     http://uitestingplayground.com/shadowdom */
 
     it('should verify that the copy button does not work', async () => {
-        await ShadowDomPage.open(await ShadowDomData.path)
-        await assert.equal(await ShadowDomData.url, await browser.getUrl())
+        await ShadowDomPage.open(await ShadowDomData.url)
+        await ShadowDomPage.validateUrl(await ShadowDomData.url)
         await ShadowDomPage.generateAndCopyGuid()
         let clipboardText = await ShadowDomPage.inputGuidGenerator.getValue()
-        await ShadowDomPage.inputGuidGenerator.clearValue()
-        await ShadowDomPage.inputGuidGenerator.click()
-        await browser.keys(['Control', 'v'])
+        await ShadowDomPage.pasteClipboardValue()
         await assert.notEqual(clipboardText, await ShadowDomPage.inputGuidGenerator.getValue())
     })
 })

@@ -233,14 +233,6 @@ exports.config = {
     /**
      * Function to be executed before a test (in Mocha/Jasmine) starts.
      */
-    
-    before: () => {
-        require('expect-webdriverio');
-        global.wdioExpect = global.expect;
-        const chai = require('chai');
-        global.expect = chai.expect;
-    },
-    
     /*
     beforeTest: function () {
         require('expect-webdriverio')
