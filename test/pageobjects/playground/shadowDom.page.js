@@ -1,4 +1,4 @@
-const Page = require('./page');
+const Page = require('../page');
 
 class ShadowDomPage extends Page {
     get inputGuidGenerator () {
@@ -25,4 +25,4 @@ class ShadowDomPage extends Page {
     } 
 }
 
-module.exports = new ShadowDomPage();
+module.exports = new ShadowDomPage()

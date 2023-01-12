@@ -1,5 +1,5 @@
-const AjaxPage = require('../pageobjects/ajax.page')
-const AjaxData = require('../../data/ajax.data')
+const AjaxPage = require('../../pageobjects/playground/ajax.page')
+const AjaxData = require('../../../data/playground/ajax.data')
 
 describe('Wdio IU code challenge', () => {
     /* Crie um teste para o cenário de bug abaixo Navegue até o URL - 
