@@ -8,4 +8,10 @@ module.exports = class PlaygroundPage {
     async open (url) {
         return browser.url(url)
     }
+
+    /*
+        open (path) {
+        return browser.url(`https://the-internet.herokuapp.com/${path}`)
+    }
+    */
 }

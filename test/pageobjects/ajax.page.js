@@ -1,6 +1,6 @@
-const PlaygroundPage = require('./playground.page');
+const Page = require('./page');
 
-class AjaxPage extends PlaygroundPage {
+class AjaxPage extends Page {
     get btnTriggeringAjax () {
         return $('#ajaxButton')
     }

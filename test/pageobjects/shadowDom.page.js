@@ -1,6 +1,6 @@
-const PlaygroundPage = require('./playground.page');
+const Page = require('./page');
 
-class ShadowDomPage extends PlaygroundPage {
+class ShadowDomPage extends Page {
     get inputGuidGenerator () {
         return $('guid-generator').shadow$('#editField')
     }
