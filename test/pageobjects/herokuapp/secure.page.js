@@ -1,9 +1,6 @@
-const Page = require('./page');
+const Page = require('../page');
 
 class SecurePage extends Page {
-    /**
-     * define selectors using getter methods
-     */
     get flashAlert () {
         return $('#flash');
     }
@@ -17,4 +14,4 @@ class SecurePage extends Page {
     }
 }
 
-module.exports = new SecurePage();
+module.exports = new SecurePage()

@@ -1,4 +1,4 @@
-const Page = require('./page');
+const Page = require('../page');
 
 class LoginPage extends Page {
     get inputUsername () {
@@ -22,10 +22,6 @@ class LoginPage extends Page {
         await this.inputPassword.setValue(password)
         await this.btnLogin.click()
     }
-
-    open (path) {
-        return super.open(`${path}`);
-    }
 }
 
-module.exports = new LoginPage();
+module.exports = new LoginPage()

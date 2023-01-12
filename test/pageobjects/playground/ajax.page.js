@@ -1,4 +1,4 @@
-const Page = require('./page');
+const Page = require('../page');
 
 class AjaxPage extends Page {
     get btnTriggeringAjax () {
@@ -21,4 +21,4 @@ class AjaxPage extends Page {
     }
 }
 
-module.exports = new AjaxPage();
+module.exports = new AjaxPage()

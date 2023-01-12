@@ -1,5 +1,5 @@
-const ShadowDomPage = require('../pageobjects/shadowDom.page')
-const ShadowDomData = require('../../data/shadowDom.data')
+const ShadowDomPage = require('../pageobjects/playground/shadowDom.page')
+const ShadowDomData = require('../../../data/playground/shadowDom.data')
 const { assert } = require('chai')
 
 describe('Wdio IU code challenge', () => {

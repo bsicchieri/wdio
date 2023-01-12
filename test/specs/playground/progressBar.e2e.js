@@ -1,5 +1,5 @@
-const ProgressBarPage = require('../pageobjects/progressBar.page')
-const ProgressBarData = require('../../data/progressBar.data')
+const ProgressBarPage = require('../pageobjects/playground/progressBar.page')
+const ProgressBarData = require('../../../data/playground/progressBar.data')
 
 describe('Wdio IU code challenge', () => {
     /* Crie um teste para o cenário abaixo Navegue até a url - 

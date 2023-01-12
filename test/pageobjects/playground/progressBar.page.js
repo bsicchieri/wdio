@@ -1,4 +1,4 @@
-const Page = require('./page');
+const Page = require('../page');
 
 class ProgressBarPage extends Page {
     get btnStart () {
@@ -43,4 +43,4 @@ class ProgressBarPage extends Page {
     }
 }
 
-module.exports = new ProgressBarPage();
+module.exports = new ProgressBarPage()
